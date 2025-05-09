@@ -1,8 +1,8 @@
 import {useState} from "react";
 import css from './App.module.css'
-import CareInfo from '../CafeInfo/CareInfo.tsx'
+import CafeInfo from '../CafeInfo/CafeInfo.tsx'
 import VoteOptions from "../VoteOptions/VoteOptions.tsx";
-import VotesStats from "../VoteStats/VotesStats.tsx";
+import VotesStats from "../VoteStats/VoteStats.tsx";
 import Notification from "../Notification/Notification.tsx";
 import type {Votes, VoteType} from '../../types/votes.ts';
 
@@ -37,7 +37,7 @@ function App() {
 
     return (
         <div className={css.app}>
-            <CareInfo/>
+            <CafeInfo/>
             <VoteOptions onVote={handleVote} onReset={resetVotes} canReset={totalVotes ? true : false}/>
             {totalVotes ?
                 (<VotesStats votes={votes} totalVotes={totalVotes} positiveRate={positiveRate}/>) :
