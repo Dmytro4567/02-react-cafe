@@ -2,13 +2,13 @@ import css from './VoteStats.module.css'
 import type {Votes} from "../../types/votes.ts";
 
 
-interface VotesStatsProps {
+interface VoteStatsProps {
     votes: Votes;
     totalVotes: number;
     positiveRate: number;
 }
 
-function VoteStats({votes, totalVotes, positiveRate}: VotesStatsProps) {
+function VoteStats({votes, totalVotes, positiveRate}: VoteStatsProps) {
     return (
         <div className={css.container}>
             <p className={css.stat}>Good: <strong>{votes.good}</strong></p>
